@@ -50,10 +50,6 @@ const styles = ({ spacing }: ITheme) => {
         backgroundColor: alpha(theme.palette.error.main, 0.3)
       }
     },
-    buttonPrimary:{
-      borderColor: theme.palette.secondary.main,
-      color:THEME_EXTRA.typography.subdued
-    },
     tab:{
       color:THEME_EXTRA.typography.subdued
     },
@@ -160,7 +156,7 @@ const JobDetailPage: FunctionComponent<IProps> = props => {
           <Box mr={1}>
             <Button
               variant='outlined'
-              className={classes.buttonPrimary}
+              color="secondary"
               target={'_blank'}
               href={job.location}
               disabled={!job.location}

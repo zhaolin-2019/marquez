@@ -6,13 +6,14 @@ import { createTheme } from '@material-ui/core'
 export const theme = createTheme({
   overrides: {
     MuiCssBaseline: {
+      //全局css
       '@global': {
         body: {
           // color: '#fff'
           color:'#191f26'
-        }
+        },
       }
-    }
+    },
   },
   typography: {
     fontFamily: 'Karla',
@@ -51,6 +52,9 @@ export const theme = createTheme({
     common:{
      black:'#191f26',
     },
+    action:{
+      disabled:'#abb1bd',
+    }
   }
 })
 
