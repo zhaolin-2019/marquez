@@ -12,6 +12,9 @@ import NamespaceSelect from '../namespace-select/NamespaceSelect'
 import React, { ReactElement } from 'react'
 import Search from '../search/Search'
 import marquez_logo from './marquez_logo.svg'
+import Sidenav from '../sidenav/Sidenav'
+import I18n from '../i18n/I18n'
+
 
 const styles = (theme: Theme) => {
   return createStyles({
@@ -20,8 +23,10 @@ const styles = (theme: Theme) => {
       backgroundColor: theme.palette.background.default,
       borderBottom: `2px dashed ${theme.palette.secondary.main}`,
       padding: `${theme.spacing(2)}px 0`,
-      left: DRAWER_WIDTH + 1,
-      width: `calc(100% - ${DRAWER_WIDTH}px)`
+      // left: DRAWER_WIDTH + 1,
+      // width: `calc(100% - ${DRAWER_WIDTH}px)`
+      left:0,
+      width:'100%',
     },
     toolbar: {
       display: 'flex',
@@ -45,15 +50,18 @@ const Header = (props: HeaderProps): ReactElement => {
   const { classes } = props
   const i18next = require('i18next')
   return (
-    <AppBar position='fixed' elevation={0} className={classes.appBar}>
+    <AppBar position='relative' elevation={0} className={classes.appBar}>
       <Toolbar>
         <Box className={classes.innerToolbar}>
+          {/* 将左侧导航放在顶部了 */}
+          <Sidenav />
           {/* <Link to='/'>
             <img src={marquez_logo} height={48} alt='Marquez Logo' />
           </Link> */}
           <Box display={'flex'} alignItems={'center'}>
             <Search />
             <NamespaceSelect />
+            <I18n />
             {/* <Box ml={2}>
               <MqText link href={API_DOCS_URL}>
                 {i18next.t('header.docs_link')}

@@ -60,7 +60,7 @@ class Datasets extends React.Component<DatasetsProps> {
     const { datasets, isDatasetsLoading, isDatasetsInit } = this.props
     const i18next = require('i18next')
     return (
-      <Container maxWidth={'lg'} disableGutters>
+      <Container maxWidth={'xl'} disableGutters>
         <MqScreenLoad loading={isDatasetsLoading || !isDatasetsInit}>
           <>
             {datasets.length === 0 ? (

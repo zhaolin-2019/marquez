@@ -31,8 +31,7 @@ const BOTTOM_OFFSET = 8
 const styles = () => {
   return createStyles({
     lineageContainer: {
-      marginTop: HEADER_HEIGHT,
-      height: `calc(100vh - ${HEADER_HEIGHT}px - ${BOTTOM_OFFSET}px)`
+      height: `calc(100vh - ${BOTTOM_OFFSET}px)`
     }
   })
 }

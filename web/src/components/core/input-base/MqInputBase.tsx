@@ -18,6 +18,7 @@ export const MqInputBase = withStyles((theme: Theme) =>
       transition: theme.transitions.create(['border-color', 'box-shadow']),
       '&:focus': {
         borderColor: theme.palette.primary.main,
+        color:theme.palette.primary.main,
         boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 3px`,
         borderRadius: theme.spacing(4)
       },
@@ -48,6 +49,7 @@ export const MqInputNoIcon = withStyles((theme: Theme) =>
       transition: theme.transitions.create(['border-color', 'box-shadow']),
       '&:focus': {
         borderColor: theme.palette.primary.main,
+        color:theme.palette.primary.main,
         boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 3px`,
         borderRadius: theme.spacing(4)
       },

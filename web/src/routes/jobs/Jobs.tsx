@@ -57,7 +57,7 @@ class Jobs extends React.Component<JobsProps> {
     const { jobs, isJobsLoading, isJobsInit } = this.props
     const i18next = require('i18next')
     return (
-      <Container maxWidth={'lg'} disableGutters>
+      <Container maxWidth={'xl'} disableGutters>
         <MqScreenLoad loading={isJobsLoading || !isJobsInit}>
           <>
             {jobs.length === 0 ? (

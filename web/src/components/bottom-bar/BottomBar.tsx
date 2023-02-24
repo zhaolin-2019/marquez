@@ -22,9 +22,9 @@ const styles = (theme: Theme) => {
       backgroundColor: theme.palette.background.default
     },
     bottomBar: {
-      marginLeft: DRAWER_WIDTH,
+      // marginLeft: DRAWER_WIDTH,
       right: 0,
-      width: `calc(100% - ${DRAWER_WIDTH}px)`,
+      width: "100%",
       bottom: 0,
       position: 'fixed'
     }
@@ -53,7 +53,7 @@ class BottomBar extends React.Component<BottomBarProps> {
       <Box className={classes.bottomBar}>
         <DragBar />
         <Box className={classes.overflow} height={bottomBarHeight}>
-          <Container maxWidth={'lg'} disableGutters={true}>
+          <Container maxWidth={'xl'} disableGutters={true}>
             {lineageJob && <JobDetailPage job={lineageJob} />}
             {lineageDataset && <DatasetDetailPage lineageDataset={lineageDataset} />}
           </Container>

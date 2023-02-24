@@ -178,7 +178,7 @@ class Events extends React.Component<EventsProps, EventsState> {
     const i18next = require('i18next')
 
     return (
-      <Container maxWidth={'lg'} disableGutters>
+      <Container maxWidth={'xl'} disableGutters>
         <MqScreenLoad loading={isEventsLoading || !isEventsInit}>
           <>
             <Box p={2} display={'flex'} justifyContent={'space-between'}>

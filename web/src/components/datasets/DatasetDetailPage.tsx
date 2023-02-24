@@ -40,7 +40,7 @@ import React, { ChangeEvent, FunctionComponent, SetStateAction, useEffect } from
 const styles = ({ spacing }: ITheme) => {
   return createStyles({
     root: {
-      padding: `0 ${spacing(2)}px`
+      padding: `0 ${spacing(2)}px`,
     },
     tagList: {
       display: 'flex',
@@ -152,7 +152,7 @@ const DatasetDetailPage: FunctionComponent<IProps> = props => {
   const facetsStatus = datasetFacetsStatus(firstVersion.facets)
 
   return (
-    <Box my={2} className={root}>
+    <Box my={2} className={root} >
       <Box>
         {tags.length > 0 && (
           <ul className={classes.tagList}>

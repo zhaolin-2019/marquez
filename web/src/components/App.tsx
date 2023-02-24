@@ -11,7 +11,7 @@ import { Route, Switch } from 'react-router-dom'
 import { applyMiddleware, createStore } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { createBrowserHistory } from 'history'
-import { theme } from '../helpers/theme'
+import { theme,DRAWER_WIDTH, HEADER_HEIGHT } from '../helpers/theme'
 import BottomBar from './bottom-bar/BottomBar'
 import Datasets from '../routes/datasets/Datasets'
 import Events from '../routes/events/Events'
@@ -26,6 +26,8 @@ import createRootReducer from '../store/reducers'
 import createSagaMiddleware from 'redux-saga'
 import rootSaga from '../store/sagas'
 
+
+//创建一个 Saga middleware
 const sagaMiddleware = createSagaMiddleware({
   onError: (error, _sagaStackIgnored) => {
     console.log('There was an error in the saga', error)
@@ -34,11 +36,13 @@ const sagaMiddleware = createSagaMiddleware({
 const history = createBrowserHistory()
 const historyMiddleware = routerMiddleware(history)
 
+//使用 applyMiddleware 将 middleware 连接至 Store
 const store = createStore(
   createRootReducer(history),
   composeWithDevTools(applyMiddleware(sagaMiddleware, historyMiddleware))
 )
 
+//运行 Saga
 sagaMiddleware.run(rootSaga)
 
 const TITLE = 'Marquez'
@@ -50,15 +54,13 @@ const App = (): ReactElement => {
         <ConnectedRouter history={history}>
           <MuiThemeProvider theme={theme}>
             <MuiPickersUtilsProvider utils={MomentUtils}>
-              <Helmet>
+              {/* <Helmet>
                 <title>{TITLE}</title>
-              </Helmet>
-              <CssBaseline />
-              <Box ml={12}>
-                <Sidenav />
-                <Container maxWidth={'lg'} disableGutters={true}>
-                  <Header />
-                </Container>
+              </Helmet> */}
+              {/* <CssBaseline /> */}
+              <Box width={'100%'}>
+                {/* <Sidenav /> */}
+                <Header />
                 <Switch>
                   <Route path={'/'} exact>
                     <Jobs />
