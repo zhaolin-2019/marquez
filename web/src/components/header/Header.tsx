@@ -48,17 +48,17 @@ const Header = (props: HeaderProps): ReactElement => {
     <AppBar position='fixed' elevation={0} className={classes.appBar}>
       <Toolbar>
         <Box className={classes.innerToolbar}>
-          <Link to='/'>
+          {/* <Link to='/'>
             <img src={marquez_logo} height={48} alt='Marquez Logo' />
-          </Link>
+          </Link> */}
           <Box display={'flex'} alignItems={'center'}>
             <Search />
             <NamespaceSelect />
-            <Box ml={2}>
+            {/* <Box ml={2}>
               <MqText link href={API_DOCS_URL}>
                 {i18next.t('header.docs_link')}
               </MqText>
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Toolbar>

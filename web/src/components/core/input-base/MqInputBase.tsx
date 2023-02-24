@@ -10,7 +10,8 @@ export const MqInputBase = withStyles((theme: Theme) =>
     input: {
       borderRadius: theme.spacing(4),
       position: 'relative',
-      backgroundColor: 'transparent',
+      // backgroundColor: 'transparent',
+      backgroundColor:'rgba(0,0,0,0.6)',
       border: `2px solid ${theme.palette.common.white}`,
       fontSize: 16,
       padding: `${theme.spacing(1)}px ${theme.spacing(5)}px`,
@@ -37,7 +38,8 @@ export const MqInputNoIcon = withStyles((theme: Theme) =>
     input: {
       borderRadius: theme.spacing(4),
       position: 'relative',
-      backgroundColor: 'transparent',
+      // backgroundColor: 'transparent',
+      backgroundColor:'rgba(0,0,0,0.5)',
       border: `2px solid ${theme.palette.common.white}`,
       fontSize: 16,
       padding: `${theme.spacing(1)}px ${theme.spacing(5)}px ${theme.spacing(1)}px ${theme.spacing(

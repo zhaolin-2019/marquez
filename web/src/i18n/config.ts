@@ -18,7 +18,7 @@ i18next
   .use(initReactI18next)
   .init({
     debug: false,
-    fallbackLng: 'en',
+    fallbackLng: 'zh',
     resources: {
       en: {
         translation: {
@@ -127,6 +127,116 @@ i18next
             name: 'NAME',
             namespace: 'NAMESPACE',
             time: 'TIME'
+          }
+        }
+      },
+      zh: {
+        translation: {
+          header: {
+            docs_link: 'API 文档'
+          },
+          jobs: {
+            latest_tab: '最新运行',
+            history_tab: '历史运行',
+            location: '定位',
+            empty_title: '没有运行信息',
+            empty_body: '尝试为此作业添加一些运行',
+            runinfo_subhead: '部分',
+            runs_subhead: '部分',
+            dialog_delete: '删除',
+            dialog_confirmation_title: '你确定嘛?'
+          },
+          search: {
+            search: '搜索',
+            jobs: '作业',
+            and: '和',
+            datasets: '数据集'
+          },
+          lineage: {
+            empty_title: '没有节点可供选择',
+            empty_body: '试着通过搜索，工作或数据集来选择一个节点'
+          },
+          sidenav: {
+            jobs: '作业',
+            datasets: '数据集',
+            events: '事件'
+          },
+          namespace_select: {
+            prompt: 'ns'
+          },
+          dataset_info: {
+            empty_title: '没有字段',
+            empty_body: '尝试添加数据集字段',
+            facets_subhead: '部分',
+            run_subhead: '由run创建',
+            duration: '持续时间'
+          },
+          datasets: {
+            latest_tab: '最新模式',
+            history_tab: '历史版本',
+            column_lineage_tab: '血缘',
+            dialog_delete: '删除',
+            dialog_confirmation_title: '你确定嘛?'
+          },
+          datasets_route: {
+            empty_title: '没找到数据集',
+            empty_body: '尝试更改名称空间或查阅文档来添加数据集。',
+            heading: '数据集',
+            name_col: '名称',
+            namespace_col: '命名空间',
+            source_col: '来源',
+            updated_col: '更新日期',
+            status_col: '状态'
+          },
+          datasets_column_lineage: {
+            empty_title: '没有列血缘关系',
+            empty_body: '列血缘关系对于指定的数据集不可用'
+          },
+          jobs_route: {
+            empty_title: '没找到作业',
+            empty_body: '试着改变日期或查询文档来添加事件',
+            heading: '作业',
+            name_col: '名称',
+            namespace_col: '命名空间',
+            updated_col: '更新日期',
+            latest_run_col: '最新运行时间',
+            latest_run_state_col: '最新运行状态'
+          },
+          runs_columns: {
+            id: 'ID',
+            state: '状态',
+            created_at: '创建时间',
+            started_at: '开始时间',
+            ended_at: '结束时间',
+            duration: '持续时间'
+          },
+          dataset_info_columns: {
+            name: '名称',
+            type: '类型',
+            description: '描述'
+          },
+          dataset_versions_columns: {
+            version: '版本',
+            created_at: '创建时间',
+            fields: '字段',
+            created_by_run: '由run创建',
+            lifecycle_state: '生命周期'
+          },
+          events_route: {
+            title: '事件',
+            from_date: '起始日期',
+            to_date: '结束日期',
+            previous_page: '上一页',
+            next_page: '下一页',
+            empty_title: '没找到事件',
+            empty_body: '尝试更改日期或查阅文档来添加事件'
+          },
+          events_columns: {
+            id: 'ID',
+            state: '状态',
+            name: '名称',
+            namespace: '命名空间',
+            time: '时间'
           }
         }
       },

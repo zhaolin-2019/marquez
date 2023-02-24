@@ -23,7 +23,7 @@ exports[`Dialog Component renders a snapshot that matches previous 1`] = `
       style={
         Object {
           "backgroundColor": "#ee7b7b",
-          "color": "#fff",
+          "color": "black",
         }
       }
     >

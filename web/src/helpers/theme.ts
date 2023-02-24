@@ -8,7 +8,8 @@ export const theme = createTheme({
     MuiCssBaseline: {
       '@global': {
         body: {
-          color: '#fff'
+          // color: '#fff'
+          color:'#191f26'
         }
       }
     }
@@ -28,7 +29,8 @@ export const theme = createTheme({
   palette: {
     type: 'dark',
     primary: {
-      main: '#71ddbf'
+      // main: '#71ddbf'
+      main:'#409eff'
     },
     error: {
       main: '#ee7b7b'
@@ -40,11 +42,15 @@ export const theme = createTheme({
       main: '#FECC00'
     },
     background: {
-      default: '#191f26'
+      // default: '#191f26'
+      default:'#fff'
     },
     secondary: {
       main: '#454f5b'
-    }
+    },
+    common:{
+     black:'#191f26',
+    },
   }
 })
 
@@ -52,6 +58,13 @@ export const THEME_EXTRA = {
   typography: {
     subdued: '#abb1bd',
     disabled: '#8d9499'
+  },
+  blue_group:{
+    level1:'#ecf5ff',
+    level2:'#d9ecff',
+    level3:'#c6e2ff',
+    level4:'#a0cfff',
+    level5:'#409eff',
   }
 }
 

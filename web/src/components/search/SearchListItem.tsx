@@ -9,7 +9,7 @@ import { SearchResult } from '../../types/api'
 import { encodeNode } from '../../helpers/nodes'
 import { faCog } from '@fortawesome/free-solid-svg-icons/faCog'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons'
-import { theme } from '../../helpers/theme'
+import { theme,THEME_EXTRA} from '../../helpers/theme'
 import MqText from '../core/text/MqText'
 import React from 'react'
 import classNames from 'classnames'
@@ -33,13 +33,15 @@ const styles = (theme: Theme) =>
         borderBottomRightRadius: '2px'
       },
       '&:hover, &.selected': {
-        backgroundColor: darken(theme.palette.background.paper, 0.02)
+        // backgroundColor: darken(theme.palette.background.paper, 0.02)
+        backgroundColor:THEME_EXTRA.blue_group.level1
       },
       '&:nth-child(even)': {
-        backgroundColor: darken(theme.palette.background.paper, 0.2),
+        // backgroundColor: darken(theme.palette.background.paper, 0.2),
+        backgroundColor:THEME_EXTRA.blue_group.level1,
         '&:hover, &.selected': {
-          backgroundColor: darken(theme.palette.background.paper, 0.02)
-        }
+          // backgroundColor: darken(theme.palette.background.paper, 0.02)
+          backgroundColor:THEME_EXTRA.blue_group.level1       }
       }
     },
     textOverflow: {

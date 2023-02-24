@@ -23,7 +23,7 @@ import {
   resetDataset,
   resetDatasetVersions
 } from '../../store/actionCreators'
-import { theme } from '../../helpers/theme'
+import { theme,THEME_EXTRA } from '../../helpers/theme'
 import { useHistory } from 'react-router-dom'
 import CircularProgress from '@material-ui/core/CircularProgress/CircularProgress'
 import CloseIcon from '@material-ui/icons/Close'
@@ -61,7 +61,10 @@ const styles = ({ spacing }: ITheme) => {
         borderColor: alpha(theme.palette.error.main, 0.3),
         backgroundColor: alpha(theme.palette.error.main, 0.3)
       }
-    }
+    },
+    tab:{
+      color:THEME_EXTRA.typography.subdued
+    },
   })
 }
 
@@ -167,16 +170,20 @@ const DatasetDetailPage: FunctionComponent<IProps> = props => {
                 label={i18next.t('datasets.latest_tab')}
                 {...a11yProps(0)}
                 disableRipple={true}
+                className={classes.tab}
               />
               <Tab
                 label={i18next.t('datasets.history_tab')}
                 {...a11yProps(1)}
                 disableRipple={true}
+                color={THEME_EXTRA.typography.subdued}
+                className={classes.tab}
               />
               <Tab
                 label={i18next.t('datasets.column_lineage_tab')}
                 {...a11yProps(1)}
                 disableRipple={true}
+                className={classes.tab}
               />
             </Tabs>
           </Box>
@@ -202,7 +209,7 @@ const DatasetDetailPage: FunctionComponent<IProps> = props => {
               />
             </Box>
             <IconButton onClick={() => history.push('/datasets')}>
-              <CloseIcon />
+              <CloseIcon color='primary'/>
             </IconButton>
           </Box>
         </Box>

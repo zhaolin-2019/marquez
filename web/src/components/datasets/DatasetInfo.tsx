@@ -54,9 +54,9 @@ const DatasetInfo: FunctionComponent<DatasetInfoProps> = props => {
             {datasetFields.map(field => {
               return (
                 <TableRow key={field.name}>
-                  <TableCell align='left'>{field.name}</TableCell>
-                  <TableCell align='left'>{field.type}</TableCell>
-                  <TableCell align='left'>{field.description || 'no description'}</TableCell>
+                  <TableCell align='left'><MqText>{field.name}</MqText></TableCell>
+                  <TableCell align='left'><MqText>{field.type}</MqText></TableCell>
+                  <TableCell align='left'><MqText>{field.description || 'no description'}</MqText></TableCell>
                 </TableRow>
               )
             })}

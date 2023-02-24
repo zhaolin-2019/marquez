@@ -14,6 +14,8 @@ import MqText from '../core/text/MqText'
 import React, { FunctionComponent, SetStateAction } from 'react'
 import RunStatus from '../jobs/RunStatus'
 import transitions from '@material-ui/core/styles/transitions'
+import { theme,THEME_EXTRA } from '../../helpers/theme'
+
 
 const styles = (theme: ITheme) => {
   return createStyles({
@@ -23,6 +25,9 @@ const styles = (theme: ITheme) => {
       '&:hover': {
         backgroundColor: alpha(theme.palette.common.white, 0.1)
       }
+    },
+    fontColor:{
+      color:THEME_EXTRA.typography.subdued
     }
   })
 }
@@ -100,22 +105,22 @@ const DatasetVersions: FunctionComponent<DatasetVersionsProps &
               key={version.createdAt}
               onClick={() => handleClick(version)}
             >
-              <TableCell align='left'>{version.version}</TableCell>
-              <TableCell align='left'>{formatUpdatedAt(version.createdAt)}</TableCell>
-              <TableCell align='left'>{version.fields.length}</TableCell>
+              <TableCell align='left'><MqText>{version.version}</MqText></TableCell>
+              <TableCell align='left'><MqText>{formatUpdatedAt(version.createdAt)}</MqText></TableCell>
+              <TableCell align='left'><MqText>{version.fields.length}</MqText></TableCell>
               <TableCell align='left'>
                 <Box display={'flex'} alignItems={'center'}>
-                  {version.createdByRun ? (
+                {version.createdByRun ? (
                     <>
                       <RunStatus run={version.createdByRun} />
-                      {version.createdByRun ? version.createdByRun.id : 'N/A'}
+                      <MqText>{version.createdByRun ? version.createdByRun.id : 'N/A'}</MqText>
                     </>
                   ) : (
                     'N/A'
                   )}
                 </Box>
               </TableCell>
-              <TableCell align='left'>{version.lifecycleState}</TableCell>
+              <TableCell align='left'><MqText>{version.lifecycleState}</MqText></TableCell>
             </TableRow>
           )
         })}

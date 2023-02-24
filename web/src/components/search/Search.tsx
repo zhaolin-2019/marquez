@@ -49,7 +49,8 @@ const INITIAL_SEARCH_SORT_FILTER = [
     icon: faSort,
     value: 'Sort',
     foregroundColor: theme.palette.common.white,
-    backgroundColor: 'transparent',
+    // backgroundColor: 'transparent',
+    backgroundColor: theme.palette.primary.main,
     selectable: false
   },
   {
@@ -65,7 +66,8 @@ const INITIAL_SEARCH_SORT_FILTER = [
 const styles = (theme: Theme) =>
   createStyles({
     searchContainer: {
-      position: 'relative'
+      position: 'relative',
+      color:'#191f26'
     },
     search: {
       zIndex: theme.zIndex.appBar + 2
@@ -82,7 +84,8 @@ const styles = (theme: Theme) =>
       padding: `${theme.spacing(1)}px ${theme.spacing(3)}px ${theme.spacing(0.5)}px ${theme.spacing(
         1
       )}px`,
-      backgroundColor: darken(theme.palette.background.paper, 0.05)
+      // backgroundColor: darken(theme.palette.background.paper, 0.05)
+      backgroundColor: 'rgba(0,0,0,0.3)'
     },
     closeIcon: {
       position: 'absolute',

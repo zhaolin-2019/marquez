@@ -26,7 +26,7 @@ import {
   resetRuns
 } from '../../store/actionCreators'
 import { jobRunsStatus } from '../../helpers/nodes'
-import { theme } from '../../helpers/theme'
+import { theme,THEME_EXTRA } from '../../helpers/theme'
 import { useHistory } from 'react-router-dom'
 import CloseIcon from '@material-ui/icons/Close'
 import Dialog from '../Dialog'
@@ -49,7 +49,14 @@ const styles = ({ spacing }: ITheme) => {
         borderColor: alpha(theme.palette.error.main, 0.3),
         backgroundColor: alpha(theme.palette.error.main, 0.3)
       }
-    }
+    },
+    buttonPrimary:{
+      borderColor: theme.palette.secondary.main,
+      color:THEME_EXTRA.typography.subdued
+    },
+    tab:{
+      color:THEME_EXTRA.typography.subdued
+    },
   })
 }
 
@@ -126,8 +133,8 @@ const JobDetailPage: FunctionComponent<IProps> = props => {
     >
       <Box mb={2} display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
         <Tabs value={tab} onChange={handleChange} textColor='primary' indicatorColor='primary'>
-          <Tab label={i18next.t('jobs.latest_tab')} disableRipple={true} />
-          <Tab label={i18next.t('jobs.history_tab')} disableRipple={true} />
+          <Tab label={i18next.t('jobs.latest_tab')} className={classes.tab} disableRipple={true} />
+          <Tab label={i18next.t('jobs.history_tab')} className={classes.tab} disableRipple={true} />
         </Tabs>
         <Box display={'flex'} alignItems={'center'}>
           <Box mr={1}>
@@ -153,7 +160,7 @@ const JobDetailPage: FunctionComponent<IProps> = props => {
           <Box mr={1}>
             <Button
               variant='outlined'
-              color='primary'
+              className={classes.buttonPrimary}
               target={'_blank'}
               href={job.location}
               disabled={!job.location}
@@ -162,7 +169,7 @@ const JobDetailPage: FunctionComponent<IProps> = props => {
             </Button>
           </Box>
           <IconButton onClick={() => history.push('/')}>
-            <CloseIcon />
+            <CloseIcon color="primary"/>
           </IconButton>
         </Box>
       </Box>

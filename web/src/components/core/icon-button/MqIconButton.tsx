@@ -5,7 +5,7 @@ import React, { ReactElement } from 'react'
 import classNames from 'classnames'
 
 import { Theme } from '@material-ui/core'
-import { theme } from '../../../helpers/theme'
+import { theme,THEME_EXTRA } from '../../../helpers/theme'
 import Box from '@material-ui/core/Box'
 import ButtonBase from '@material-ui/core/ButtonBase'
 import createStyles from '@material-ui/core/styles/createStyles'
@@ -20,7 +20,7 @@ const styles = (theme: Theme) =>
       color: theme.palette.secondary.main,
       background: theme.palette.background.default,
       transition: theme.transitions.create(['background-color', 'color']),
-      border: '2px solid transparent',
+      border: '2px solid #ecf5ff',
       '&:hover': {
         border: `2px dashed ${theme.palette.primary.main}`
       }
@@ -28,6 +28,7 @@ const styles = (theme: Theme) =>
     active: {
       background: theme.palette.primary.main,
       color: theme.palette.common.white
+      // color:theme.palette.primary.main
     },
     iconButtonContainer: {
       color: 'transparent',

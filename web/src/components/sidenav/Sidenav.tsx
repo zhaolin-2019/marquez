@@ -123,6 +123,9 @@ class Sidenav extends React.Component<SidenavProps> {
                 <MenuItem key={'en'} value={'en'}>
                   {'en'}
                 </MenuItem>
+                <MenuItem key={'zh'} value={'zh'}>
+                  {'zh'}
+                </MenuItem>
                 <MenuItem key={'es'} value={'es'}>
                   {'es'}
                 </MenuItem>

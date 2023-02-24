@@ -6,7 +6,7 @@ import { GraphEdge } from 'dagre'
 import { LinePath } from '@visx/shape'
 import { curveMonotoneX } from '@visx/curve'
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons/faCaretRight'
-import { theme } from '../../../../helpers/theme'
+import { theme,THEME_EXTRA } from '../../../../helpers/theme'
 import React from 'react'
 
 type EdgeProps = {
@@ -52,7 +52,7 @@ class Edge extends React.Component<EdgeProps> {
             data={edge.points}
             x={(d, index) => (index === 0 ? d.x + 20 : d.x - 25)}
             y={d => d.y}
-            stroke={edge.isSelected ? theme.palette.common.white : theme.palette.secondary.main}
+            stroke={edge.isSelected ? THEME_EXTRA.typography.subdued : theme.palette.common.black}
             strokeWidth={1}
             opacity={1}
             shapeRendering='geometricPrecision'
@@ -66,7 +66,7 @@ class Edge extends React.Component<EdgeProps> {
             y={edge.y - ICON_SIZE / 2}
             width={ICON_SIZE}
             height={ICON_SIZE}
-            color={edge.isSelected ? theme.palette.common.white : theme.palette.secondary.main}
+            color={edge.isSelected ? THEME_EXTRA.typography.subdued : theme.palette.common.black}
           />
         ))}
       </>

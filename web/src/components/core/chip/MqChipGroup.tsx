@@ -9,12 +9,15 @@ import { Undefinable } from '../../../types/util/Nullable'
 import Box from '@material-ui/core/Box'
 import MqChip from './MqChip'
 import withStyles from '@material-ui/core/styles/withStyles'
+import { THEME_EXTRA, theme } from '../../../helpers/theme'
+
 
 const styles = (theme: Theme) =>
   createStyles({
     root: {
       border: `1px solid ${theme.palette.primary.main}`,
-      backgroundColor: theme.palette.background.paper,
+      // backgroundColor: theme.palette.background.paper,
+      backgroundColor:THEME_EXTRA.blue_group.level1,
       borderRadius: theme.spacing(2),
       display: 'inline-block',
       padding: '1px'

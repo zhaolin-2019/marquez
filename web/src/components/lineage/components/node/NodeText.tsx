@@ -21,7 +21,7 @@ export function NodeText({ node }: NodeTextProps) {
       y={node.y + TEXT_BOTTOM_SPACING}
       fontSize='8'
       textAnchor='middle'
-      fill={'white'}
+      fill={'black'}
     >
       {node.data.name.length > MAX_CHARACTERS
         ? `${node.data.name.substring(

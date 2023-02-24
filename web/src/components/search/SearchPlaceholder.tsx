@@ -34,7 +34,7 @@ const SearchPlaceholder: React.FC<WithStyles<typeof styles>> = ({ classes }) => 
           {' '}
           {i18next.t('search.search')}
         </MqText>{' '}
-        <MqText bold inline font={'mono'} color={theme.palette.common.white}>
+        <MqText bold inline font={'mono'} color={theme.palette.common.black}>
           {' '}
           {i18next.t('search.jobs')}
         </MqText>{' '}
@@ -42,7 +42,7 @@ const SearchPlaceholder: React.FC<WithStyles<typeof styles>> = ({ classes }) => 
           {' '}
           {i18next.t('search.and')}
         </MqText>{' '}
-        <MqText bold inline font={'mono'} color={theme.palette.common.white}>
+        <MqText bold inline font={'mono'} color={theme.palette.common.black}>
           {' '}
           {i18next.t('search.datasets')}
         </MqText>

@@ -18,7 +18,7 @@ const styles = (theme: Theme) =>
       fontFamily: `${'Karla'}, sans-serif`,
       margin: 0,
       padding: 0,
-      color: theme.palette.common.white,
+      color: theme.palette.common.black,
       fontWeight: 400
     },
     inline: {
@@ -64,7 +64,7 @@ const styles = (theme: Theme) =>
       marginBottom: theme.spacing(1)
     },
     inverse: {
-      color: theme.palette.common.white
+      color: THEME_EXTRA.typography.subdued
     },
     small: {
       fontSize: '.625rem'
