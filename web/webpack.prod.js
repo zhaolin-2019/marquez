@@ -17,6 +17,7 @@ const webpackProd = {
       template: 'src/index.prod.html',
       favicon: 'src/img/favicon.png'
     }),
+    // DefinePlugin 在编译时可以配置的全局常量
     new webpack.DefinePlugin({
       __DEVELOPMENT__: JSON.stringify(false),
       __NODE_ENV__: JSON.stringify('production'),

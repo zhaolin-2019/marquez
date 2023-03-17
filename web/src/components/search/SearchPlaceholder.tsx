@@ -30,19 +30,19 @@ const SearchPlaceholder: React.FC<WithStyles<typeof styles>> = ({ classes }) => 
   return (
     <Box className={classes.root}>
       <Box display={'inline'}>
-        <MqText disabled inline>
+        <MqText disabled inline color={'white'}>
           {' '}
           {i18next.t('search.search')}
         </MqText>{' '}
-        <MqText bold inline font={'mono'} color={theme.palette.common.black}>
+        <MqText bold inline font={'mono'} color={'white'}>
           {' '}
           {i18next.t('search.jobs')}
         </MqText>{' '}
-        <MqText disabled inline>
+        <MqText disabled inline color={'white'}>
           {' '}
           {i18next.t('search.and')}
         </MqText>{' '}
-        <MqText bold inline font={'mono'} color={theme.palette.common.black}>
+        <MqText bold inline font={'mono'} color={'white'}>
           {' '}
           {i18next.t('search.datasets')}
         </MqText>

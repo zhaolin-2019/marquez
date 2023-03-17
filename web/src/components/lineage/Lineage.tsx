@@ -81,6 +81,7 @@ class Lineage extends React.Component<LineageProps, LineageState> {
   }
 
   componentDidMount() {
+    //从路由获取
     const nodeName = this.props.match.params.nodeName
     const namespace = this.props.match.params.namespace
     const nodeType = this.props.match.params.nodeType
@@ -122,9 +123,13 @@ class Lineage extends React.Component<LineageProps, LineageState> {
     this.props.resetLineage()
   }
 
+  //绘制流程图
   initGraph = () => {
+    // 创建一个有向图
     g = new graphlib.Graph<MqNode>({ directed: true })
+    //设置图像
     g.setGraph(DAGRE_CONFIG)
+    // 默认为每个边分配一个新的标签对象
     g.setDefaultEdgeLabel(() => {
       return {}
     })
@@ -132,7 +137,6 @@ class Lineage extends React.Component<LineageProps, LineageState> {
 
   getEdges = () => {
     const selectedPaths = this.getSelectedPaths()
-
     return g?.edges().map(e => {
       const isSelected = selectedPaths.some((r: any) => e.v === r[0] && e.w === r[1])
       return Object.assign(g.edge(e), { isSelected: isSelected })
@@ -141,9 +145,9 @@ class Lineage extends React.Component<LineageProps, LineageState> {
 
   getSelectedPaths = () => {
     const paths = [] as Array<[string, string]>
-
     const getSuccessors = (node: string) => {
-      const successors = g?.successors(node)
+
+      const successors = g?.successors(node)                                                                                                            
       if (successors?.length) {
         for (let i = 0; i < node.length - 1; i++) {
           if (successors[i]) {
@@ -173,7 +177,7 @@ class Lineage extends React.Component<LineageProps, LineageState> {
   }
 
   buildGraphAll = (graph: LineageNode[]) => {
-    // nodes
+    // nodes 
     for (let i = 0; i < graph.length; i++) {
       g.setNode(graph[i].id, {
         label: graph[i].id,
@@ -189,6 +193,7 @@ class Lineage extends React.Component<LineageProps, LineageState> {
         g.setEdge(graph[i].inEdges[j].origin, graph[i].id)
       }
     }
+    //dagre配置这些节点和边
     layout(g)
 
     this.setState({

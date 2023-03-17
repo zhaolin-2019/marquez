@@ -96,8 +96,10 @@ export function* fetchRunsSaga() {
 export function* fetchJobsSaga() {
   while (true) {
     try {
+      //监听action
       const { payload } = yield take(FETCH_JOBS)
       const jobs = yield call(getJobs, payload.namespace)
+      //执行的结果作为另一个action的参数
       yield put(fetchJobsSuccess(jobs))
     } catch (e) {
       yield put(applicationError('Something went wrong while fetching job runs'))

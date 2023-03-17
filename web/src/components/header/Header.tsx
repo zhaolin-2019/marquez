@@ -61,7 +61,7 @@ const Header = (props: HeaderProps): ReactElement => {
           <Box display={'flex'} alignItems={'center'}>
             <Search />
             <NamespaceSelect />
-            <I18n />
+            {/* <I18n /> */}
             {/* <Box ml={2}>
               <MqText link href={API_DOCS_URL}>
                 {i18next.t('header.docs_link')}

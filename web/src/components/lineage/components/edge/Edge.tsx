@@ -66,7 +66,7 @@ class Edge extends React.Component<EdgeProps> {
             y={edge.y - ICON_SIZE / 2}
             width={ICON_SIZE}
             height={ICON_SIZE}
-            color={edge.isSelected ? THEME_EXTRA.typography.subdued : theme.palette.common.black}
+            color={edge.isSelected ? theme.palette.common.black : THEME_EXTRA.typography.subdued}
           />
         ))}
       </>

@@ -14,7 +14,7 @@ const styles = (theme: Theme) =>
       minWidth: '200px',
       cursor: 'pointer',
       // backgroundColor: 'transparent',
-      backgroundColor:'rgba(0,0,0,0.5)',
+      backgroundColor:'rgba(0,0,0,0.3)',
       border: `2px solid ${theme.palette.common.white}`,
       padding: `${theme.spacing(1)}px ${theme.spacing(3)}px`,
       transition: theme.transitions.create(['border-color', 'box-shadow']),

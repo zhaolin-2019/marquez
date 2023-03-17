@@ -228,7 +228,7 @@ class Search extends React.Component<SearchProps, SearchState> {
     return (
       <Box width={538} position={'relative'} px={10} mr={-8} id={'searchContainer'}>
         <Box className={classes.searchIcon}>
-          <FontAwesomeIcon icon={faSearch} color={THEME_EXTRA.typography.disabled} />
+          <FontAwesomeIcon icon={faSearch} color={'white'} />
         </Box>
         {this.state.search.length === 0 && <SearchPlaceholder />}
         {this.state.search.length > 0 && (
@@ -236,7 +236,7 @@ class Search extends React.Component<SearchProps, SearchState> {
             <FontAwesomeIcon
               icon={faTimes}
               size={'1x'}
-              color={THEME_EXTRA.typography.disabled}
+              color={'white'}
               onClick={() => {
                 this.setState({ open: false, search: '', selected: '' })
               }}

@@ -29,7 +29,7 @@ const styles = (theme: Theme) =>
       width: "200px",
       flexShrink: 0,
     }
-  })
+})
 
 type SidenavProps = WithStyles<typeof styles> & RouteComponentProps
 

@@ -34,7 +34,7 @@ const styles = (theme: Theme) =>
       display: 'inline'
     },
     selected: {
-      boxShadow: `0 0 2px 3px ${theme.palette.common.white}`
+      boxShadow: `0 0 2px 3px ${theme.palette.primary.main}`
     }
   })
 

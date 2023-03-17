@@ -4,6 +4,7 @@
 import { Theme, createStyles, withStyles } from '@material-ui/core'
 import { alpha } from '@material-ui/core/styles'
 import InputBase from '@material-ui/core/InputBase'
+import {THEME_EXTRA} from '../../../helpers/theme'
 
 export const MqInputBase = withStyles((theme: Theme) =>
   createStyles({
@@ -11,22 +12,23 @@ export const MqInputBase = withStyles((theme: Theme) =>
       borderRadius: theme.spacing(4),
       position: 'relative',
       // backgroundColor: 'transparent',
-      backgroundColor:'rgba(0,0,0,0.6)',
-      border: `2px solid ${theme.palette.common.white}`,
+      backgroundColor:'rgba(0,0,0,0.3)',
+      border: `2px solid ${THEME_EXTRA.blue_group.level1}`,
       fontSize: 16,
       padding: `${theme.spacing(1)}px ${theme.spacing(5)}px`,
       transition: theme.transitions.create(['border-color', 'box-shadow']),
       '&:focus': {
         borderColor: theme.palette.primary.main,
-        color:theme.palette.primary.main,
+        color:'white',
         boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 3px`,
-        borderRadius: theme.spacing(4)
+        borderRadius: theme.spacing(4),
+        backgroundColor:'rgba(0,0,0,0.3)',
       },
       '&:hover': {
         borderColor: theme.palette.primary.main,
         boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 3px`,
         '& > label': {
-          color: theme.palette.primary.main,
+          color: 'white',
           transition: theme.transitions.create(['color'])
         }
       }
@@ -40,8 +42,8 @@ export const MqInputNoIcon = withStyles((theme: Theme) =>
       borderRadius: theme.spacing(4),
       position: 'relative',
       // backgroundColor: 'transparent',
-      backgroundColor:'rgba(0,0,0,0.5)',
-      border: `2px solid ${theme.palette.common.white}`,
+      backgroundColor:'rgba(0,0,0,0.3)',
+      border: `2px solid ${THEME_EXTRA.blue_group.level1}`,
       fontSize: 16,
       padding: `${theme.spacing(1)}px ${theme.spacing(5)}px ${theme.spacing(1)}px ${theme.spacing(
         1
@@ -49,7 +51,7 @@ export const MqInputNoIcon = withStyles((theme: Theme) =>
       transition: theme.transitions.create(['border-color', 'box-shadow']),
       '&:focus': {
         borderColor: theme.palette.primary.main,
-        color:theme.palette.primary.main,
+        color:'white',
         boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 3px`,
         borderRadius: theme.spacing(4)
       },
@@ -57,7 +59,7 @@ export const MqInputNoIcon = withStyles((theme: Theme) =>
         borderColor: theme.palette.primary.main,
         boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 3px`,
         '& > label': {
-          color: theme.palette.primary.main,
+          color: 'white',
           transition: theme.transitions.create(['color'])
         }
       }
